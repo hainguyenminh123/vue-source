@@ -6,7 +6,6 @@
 </template>
 
 <script setup lang="ts">
-import type { Tab } from '@/types';
 import { computed } from 'vue';
 
 const isActive = computed(() => props.currentTab === props.tab.key);
