@@ -8,8 +8,11 @@
       </ul>
     </nav>
     <FadeTransition>
-      <component :is="currentTabComponent" />
+      <KeepAlive>
+        <component :is="currentTabComponent" />
+      </KeepAlive>
     </FadeTransition>
+    <NotificationList />
   </main>
 </template>
 
@@ -19,6 +22,7 @@ import NotificationsSettings from '@/components/NotificationsSettings.vue';
 import PrivacySettings from '@/components/PrivacySettings.vue';
 import TabLink from '@/components/TabLink.vue';
 import FadeTransition from '@/components/FadeTransition.vue';
+import NotificationList from '@/components/NotificationList.vue';
 
 import type { Tab, TabKey } from '@/types';
 import { computed, ref } from 'vue';
